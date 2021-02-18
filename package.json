@@ -17,7 +17,7 @@
     "root:build:cjs": "pnpm run --recursive build:cjs",
     "root:clean": "pnpm run --recursive clean",
     "root:test:unit": "pnpm run --recursive test:unit",
-    "root:test": "pnpm run --recursive test",
+    "root:test": "pnpm run --recursive test:unit",
     "root:lint": "pnpm run --recursive lint",
     "root:deploy": "pnpm run root:build && pnpm run root:publish",
     "root:publish": "pnpm publish --recursive --registry https://npm.pkg.github.com",

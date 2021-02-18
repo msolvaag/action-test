@@ -1,7 +1,7 @@
 {
   "name": "action-test",
   "version": "1.0.0",
-  "description": "workspace for shared orchard suite packages",
+  "description": "workspace for shared packages",
   "license": "MIT",
   "private": true,
   "repository": {

@@ -1,0 +1,22 @@
+name: Run unit tests and linter
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+        scope: '@theorchard'
+    - uses: pnpm/action-setup@v1.2.1
+      with:
+        version: 5.17.2
+    - run: pnpm install
+    - run: pnpm root:test
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

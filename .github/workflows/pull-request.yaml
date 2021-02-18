@@ -18,6 +18,7 @@ jobs:
       with:
         version: 5.17.2
     - run: pnpm install
+    - run: pnpm root:build
     - run: pnpm root:test
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

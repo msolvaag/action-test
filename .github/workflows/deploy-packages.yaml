@@ -11,7 +11,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://npm.pkg.github.com'
-        scope: '@theorchard'
+        scope: '@msolvaag'
     - uses: pnpm/action-setup@v1.2.1
       with:
         version: 5.17.2

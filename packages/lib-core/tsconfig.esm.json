@@ -1,0 +1,19 @@
+{
+    "extends": "../../tsconfig.esm.json",
+    "compilerOptions": {
+        "noEmitOnError": true,
+        "baseUrl": ".",
+        "outDir": "./dist/esm",
+        "lib": [
+            "DOM",
+            "ES2019"
+        ]
+    },
+    "include": [
+        "./src"
+    ],
+    "exclude": [
+        "./src/**/__tests__/*",
+        "node_modules"
+    ]
+}

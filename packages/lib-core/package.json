@@ -1,0 +1,39 @@
+{
+  "name": "@msolvaag/lib-core",
+  "version": "1.0.0",
+  "description": "Utils and helpers",
+  "author": "msolvaag",
+  "homepage": "https://github.com/msolvaag/action-test#readme",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theorchard/action-test.git"
+  },
+  "scripts": {
+    "build:cjs": "tsc --build ./tsconfig.cjs.json",
+    "build:esm": "tsc --build ./tsconfig.esm.json",
+    "build": "pnpm run clean && pnpm run build:esm && pnpm run build:cjs",
+    "clean": "rm -rf dist",
+    "lint": "eslint --ext .ts,.tsx src",
+    "test:unit": "jest",
+    "test": "pnpm lint && pnpm test:unit"
+  },
+  "dependencies": {
+    "@msolvaag/lib-icons": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  }
+}

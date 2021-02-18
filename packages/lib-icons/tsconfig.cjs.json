@@ -1,0 +1,15 @@
+{
+    "extends": "../../tsconfig.cjs.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "noEmitOnError": true,
+        "outDir": "./dist/cjs"
+    },
+    "include": [
+        "./src"
+    ],
+    "exclude": [
+        "./src/**/__tests__/*",
+        "node_modules"
+    ]
+}

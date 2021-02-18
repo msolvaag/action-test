@@ -1,0 +1,47 @@
+{
+  "name": "orchard-suite-workspace",
+  "version": "1.0.0",
+  "description": "workspace for shared orchard suite packages",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theorchard/orchard-suite"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "root:build": "pnpm run --recursive build",
+    "root:build:esm": "pnpm run --recursive build:esm",
+    "root:build:cjs": "pnpm run --recursive build:cjs",
+    "root:clean": "pnpm run --recursive clean",
+    "root:test:unit": "pnpm run --recursive test:unit",
+    "root:test": "pnpm run --recursive test",
+    "root:lint": "pnpm run --recursive lint",
+    "root:deploy": "pnpm run root:build && pnpm run root:publish",
+    "root:publish": "pnpm publish --recursive --registry https://npm.pkg.github.com",
+    "new-version": "pnpx changeset && pnpx changeset version && pnpm install",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.13.0",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/react-hooks": "^4.0.0",
+    "@types/jest": "^26.0.20",
+    "@types/lodash": "^4.14.167",
+    "@types/node": "^14.14.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "eslint": "^7.17.0",
+    "jest": "^26.6.3",
+    "lodash": "^4.17.20",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-test-renderer": "^17.0.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  }
+}

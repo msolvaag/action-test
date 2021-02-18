@@ -1,0 +1,22 @@
+# bin and artifacts
+dist
+node_modules
+.cache
+.eslintcache
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+
+# user/ide configs
+.env
+.idea
+.vscode
+.DS_Store
+.npmrc
+
+# logs
+yarn-error.log
+npm-debug.log*
+coverage
+report.*

@@ -1,5 +1,6 @@
 name: Run unit tests and linter
 on:
+  push:
   pull_request:
     branches:
       - main
